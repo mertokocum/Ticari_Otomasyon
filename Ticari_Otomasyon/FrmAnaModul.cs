@@ -39,12 +39,12 @@ namespace Ticari_Otomasyon
         //    fr = null; // fr nesnesini null yaparak bir sonraki açılışta yeniden oluşturulmasını sağlayın.
         //}
 
-         FrmMusteriler fr2;
+         MÜŞTERİLER fr2;
         private void BtnMusteriler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (fr2 == null)
             {
-                fr2 = new FrmMusteriler();
+                fr2 = new MÜŞTERİLER();
                 fr2.MdiParent = this;
                 //fr2.FormClosed += Fr_FormClosed; // FormClosed olayına bir event handler ekleyin.
                 fr2.Show();
