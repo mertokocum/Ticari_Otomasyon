@@ -1,6 +1,6 @@
 ﻿namespace Ticari_Otomasyon
 {
-    partial class Form1
+    partial class FrmAnaModul
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaModul));
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BtnAnasayfa = new DevExpress.XtraBars.BarButtonItem();
@@ -42,10 +42,11 @@
             this.BtnKasa = new DevExpress.XtraBars.BarButtonItem();
             this.BtnBankalar = new DevExpress.XtraBars.BarButtonItem();
             this.BtnRehber = new DevExpress.XtraBars.BarButtonItem();
-            this.BtnFaturalar = new DevExpress.XtraBars.BarButtonItem();
             this.BtnAyarlar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnFaturalar = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +68,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnPersoneller);
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnGiderler);
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnKasa);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnBankalar);
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnRehber);
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnFaturalar);
@@ -113,6 +115,7 @@
             this.BtnMusteriler.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnMusteriler.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnMusteriler.Name = "BtnMusteriler";
+            this.BtnMusteriler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnMusteriler_ItemClick);
             // 
             // BtnFirmalar
             // 
@@ -174,16 +177,6 @@
             this.BtnRehber.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnRehber.Name = "BtnRehber";
             // 
-            // BtnFaturalar
-            // 
-            this.BtnFaturalar.Caption = "FATURALAR";
-            this.BtnFaturalar.Id = 11;
-            this.BtnFaturalar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnFaturalar.ImageOptions.Image")));
-            this.BtnFaturalar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnFaturalar.ImageOptions.LargeImage")));
-            this.BtnFaturalar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.BtnFaturalar.ItemAppearance.Normal.Options.UseFont = true;
-            this.BtnFaturalar.Name = "BtnFaturalar";
-            // 
             // BtnAyarlar
             // 
             this.BtnAyarlar.Caption = "AYARLAR";
@@ -210,29 +203,51 @@
             this.BtnKasa,
             this.BtnBankalar,
             this.BtnRehber,
-            this.BtnFaturalar,
-            this.BtnAyarlar});
+            this.BtnAyarlar,
+            this.barButtonItem1,
+            this.BtnFaturalar});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 13;
+            this.ribbonControl1.MaxItemId = 17;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1066, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(1904, 150);
             // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // Form1
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "NOTLAR";
+            this.barButtonItem1.Id = 15;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // BtnFaturalar
+            // 
+            this.BtnFaturalar.Caption = "FATURALAR";
+            this.BtnFaturalar.Id = 16;
+            this.BtnFaturalar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.BtnFaturalar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.BtnFaturalar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.BtnFaturalar.ItemAppearance.Normal.Options.UseFont = true;
+            this.BtnFaturalar.Name = "BtnFaturalar";
+            // 
+            // FrmAnaModul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 661);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
-            this.Name = "Form1";
+            this.Name = "FrmAnaModul";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
@@ -252,10 +267,11 @@
         private DevExpress.XtraBars.BarButtonItem BtnKasa;
         private DevExpress.XtraBars.BarButtonItem BtnBankalar;
         private DevExpress.XtraBars.BarButtonItem BtnRehber;
-        private DevExpress.XtraBars.BarButtonItem BtnFaturalar;
         private DevExpress.XtraBars.BarButtonItem BtnAyarlar;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem BtnFaturalar;
     }
 }

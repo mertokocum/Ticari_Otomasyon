@@ -58,7 +58,7 @@ namespace Ticari_Otomasyon
             komutsil.Parameters.AddWithValue("@p1", TxtID.Text);
             komutsil.ExecuteNonQuery();
             bgl.baglanti().Close();
-            MessageBox.Show("Ürün silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Ürün silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             listele();
         }
 
@@ -74,6 +74,24 @@ namespace Ticari_Otomasyon
             TxtAlis.Text = dr["ALISFIYAT"].ToString();
             TxtSatis.Text = dr["SATISFIYAT"].ToString();
             RchDetay.Text = dr["DETAY"].ToString();
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("update TBL_URUNLER set URUNAD=@P1,MARKA=@P2,MODEL=@P3,YIL=@P4,ADET=@P5,ALISFIYAT=@P6,SATISFIYAT=@P7,DETAY=@P8 where ID=@P9", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", TxtAd.Text);
+            komut.Parameters.AddWithValue("@p2", TxtMarka.Text);
+            komut.Parameters.AddWithValue("@p3", TxtModel.Text);
+            komut.Parameters.AddWithValue("@p4", MskYil.Text);
+            komut.Parameters.AddWithValue("@p5", int.Parse(NudAdet.Value.ToString()));
+            komut.Parameters.AddWithValue("@p6", decimal.Parse(TxtAlis.Text));
+            komut.Parameters.AddWithValue("@p7", decimal.Parse(TxtSatis.Text));
+            komut.Parameters.AddWithValue("@p8", RchDetay.Text);
+            komut.Parameters.Add("@p9", TxtID.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Ürün bilgisi güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            listele();
         }
     }
 }

@@ -32,6 +32,8 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.RchDetay = new System.Windows.Forms.RichTextBox();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -51,8 +53,6 @@
             this.MskYil = new System.Windows.Forms.MaskedTextBox();
             this.TxtID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -68,10 +68,10 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.Location = new System.Drawing.Point(12, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(796, 549);
+            this.gridControl1.Size = new System.Drawing.Size(1610, 834);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -106,22 +106,46 @@
             this.groupControl1.Controls.Add(this.MskYil);
             this.groupControl1.Controls.Add(this.TxtID);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(802, 0);
+            this.groupControl1.Location = new System.Drawing.Point(1622, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(260, 549);
+            this.groupControl1.Size = new System.Drawing.Size(270, 834);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "groupControl1";
+            // 
+            // BtnGuncelle
+            // 
+            this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.BtnGuncelle.Appearance.Options.UseFont = true;
+            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
+            this.BtnGuncelle.Location = new System.Drawing.Point(133, 511);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(120, 35);
+            this.BtnGuncelle.TabIndex = 20;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
+            // 
+            // BtnSil
+            // 
+            this.BtnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.BtnSil.Appearance.Options.UseFont = true;
+            this.BtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSil.ImageOptions.Image")));
+            this.BtnSil.Location = new System.Drawing.Point(133, 470);
+            this.BtnSil.Name = "BtnSil";
+            this.BtnSil.Size = new System.Drawing.Size(120, 35);
+            this.BtnSil.TabIndex = 19;
+            this.BtnSil.Text = "Sil";
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // BtnKaydet
             // 
             this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnKaydet.Appearance.Options.UseFont = true;
-            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image1")));
-            this.BtnKaydet.Location = new System.Drawing.Point(83, 382);
+            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
+            this.BtnKaydet.Location = new System.Drawing.Point(23, 470);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(157, 35);
+            this.BtnKaydet.Size = new System.Drawing.Size(104, 76);
             this.BtnKaydet.TabIndex = 18;
-            this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Text = "Yeni\r\nÜrün";
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // RchDetay
@@ -299,34 +323,11 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ID:";
             // 
-            // BtnSil
-            // 
-            this.BtnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.BtnSil.Appearance.Options.UseFont = true;
-            this.BtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.BtnSil.Location = new System.Drawing.Point(83, 423);
-            this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(157, 35);
-            this.BtnSil.TabIndex = 19;
-            this.BtnSil.Text = "Sil";
-            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
-            // 
-            // BtnGuncelle
-            // 
-            this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.BtnGuncelle.Appearance.Options.UseFont = true;
-            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(83, 464);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(157, 35);
-            this.BtnGuncelle.TabIndex = 20;
-            this.BtnGuncelle.Text = "Güncelle";
-            // 
             // FrmUrunler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 561);
+            this.ClientSize = new System.Drawing.Size(1904, 846);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmUrunler";
