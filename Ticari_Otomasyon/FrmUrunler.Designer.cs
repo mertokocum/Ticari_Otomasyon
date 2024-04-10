@@ -51,6 +51,8 @@
             this.MskYil = new System.Windows.Forms.MaskedTextBox();
             this.TxtID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -78,9 +80,12 @@
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.BtnGuncelle);
+            this.groupControl1.Controls.Add(this.BtnSil);
             this.groupControl1.Controls.Add(this.BtnKaydet);
             this.groupControl1.Controls.Add(this.RchDetay);
             this.groupControl1.Controls.Add(this.labelControl9);
@@ -110,19 +115,20 @@
             // 
             this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnKaydet.Appearance.Options.UseFont = true;
-            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image1")));
             this.BtnKaydet.Location = new System.Drawing.Point(83, 382);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(157, 35);
-            this.BtnKaydet.TabIndex = 23;
+            this.BtnKaydet.TabIndex = 18;
             this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // RchDetay
             // 
             this.RchDetay.Location = new System.Drawing.Point(83, 280);
             this.RchDetay.Name = "RchDetay";
             this.RchDetay.Size = new System.Drawing.Size(157, 96);
-            this.RchDetay.TabIndex = 22;
+            this.RchDetay.TabIndex = 17;
             this.RchDetay.Text = "";
             // 
             // labelControl9
@@ -132,7 +138,7 @@
             this.labelControl9.Location = new System.Drawing.Point(58, 158);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(19, 18);
-            this.labelControl9.TabIndex = 21;
+            this.labelControl9.TabIndex = 8;
             this.labelControl9.Text = "Yıl:";
             // 
             // labelControl8
@@ -142,7 +148,7 @@
             this.labelControl8.Location = new System.Drawing.Point(42, 188);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(35, 18);
-            this.labelControl8.TabIndex = 20;
+            this.labelControl8.TabIndex = 10;
             this.labelControl8.Text = "Adet:";
             // 
             // TxtSatis
@@ -152,7 +158,7 @@
             this.TxtSatis.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtSatis.Properties.Appearance.Options.UseFont = true;
             this.TxtSatis.Size = new System.Drawing.Size(157, 24);
-            this.TxtSatis.TabIndex = 19;
+            this.TxtSatis.TabIndex = 15;
             // 
             // labelControl7
             // 
@@ -161,7 +167,7 @@
             this.labelControl7.Location = new System.Drawing.Point(6, 250);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(71, 18);
-            this.labelControl7.TabIndex = 18;
+            this.labelControl7.TabIndex = 14;
             this.labelControl7.Text = "Satış Fiyat:";
             // 
             // labelControl6
@@ -181,7 +187,7 @@
             this.TxtAlis.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtAlis.Properties.Appearance.Options.UseFont = true;
             this.TxtAlis.Size = new System.Drawing.Size(157, 24);
-            this.TxtAlis.TabIndex = 15;
+            this.TxtAlis.TabIndex = 13;
             // 
             // labelControl5
             // 
@@ -190,7 +196,7 @@
             this.labelControl5.Location = new System.Drawing.Point(16, 220);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(61, 18);
-            this.labelControl5.TabIndex = 14;
+            this.labelControl5.TabIndex = 12;
             this.labelControl5.Text = "Alış Fiyat:";
             // 
             // NudAdet
@@ -204,7 +210,7 @@
             0});
             this.NudAdet.Name = "NudAdet";
             this.NudAdet.Size = new System.Drawing.Size(157, 25);
-            this.NudAdet.TabIndex = 13;
+            this.NudAdet.TabIndex = 11;
             // 
             // TxtModel
             // 
@@ -213,7 +219,7 @@
             this.TxtModel.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtModel.Properties.Appearance.Options.UseFont = true;
             this.TxtModel.Size = new System.Drawing.Size(157, 24);
-            this.TxtModel.TabIndex = 8;
+            this.TxtModel.TabIndex = 7;
             // 
             // labelControl4
             // 
@@ -222,7 +228,7 @@
             this.labelControl4.Location = new System.Drawing.Point(34, 128);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(43, 18);
-            this.labelControl4.TabIndex = 7;
+            this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "Model:";
             // 
             // TxtMarka
@@ -232,7 +238,7 @@
             this.TxtMarka.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtMarka.Properties.Appearance.Options.UseFont = true;
             this.TxtMarka.Size = new System.Drawing.Size(157, 24);
-            this.TxtMarka.TabIndex = 6;
+            this.TxtMarka.TabIndex = 5;
             // 
             // labelControl3
             // 
@@ -241,7 +247,7 @@
             this.labelControl3.Location = new System.Drawing.Point(32, 98);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(45, 18);
-            this.labelControl3.TabIndex = 5;
+            this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Marka:";
             // 
             // TxtAd
@@ -251,7 +257,7 @@
             this.TxtAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtAd.Properties.Appearance.Options.UseFont = true;
             this.TxtAd.Size = new System.Drawing.Size(157, 24);
-            this.TxtAd.TabIndex = 4;
+            this.TxtAd.TabIndex = 3;
             // 
             // labelControl2
             // 
@@ -260,7 +266,7 @@
             this.labelControl2.Location = new System.Drawing.Point(55, 68);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(22, 18);
-            this.labelControl2.TabIndex = 3;
+            this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Ad:";
             // 
             // MskYil
@@ -270,7 +276,7 @@
             this.MskYil.Mask = "2000";
             this.MskYil.Name = "MskYil";
             this.MskYil.Size = new System.Drawing.Size(157, 25);
-            this.MskYil.TabIndex = 2;
+            this.MskYil.TabIndex = 9;
             this.MskYil.ValidatingType = typeof(int);
             // 
             // TxtID
@@ -292,6 +298,29 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ID:";
             // 
+            // BtnSil
+            // 
+            this.BtnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.BtnSil.Appearance.Options.UseFont = true;
+            this.BtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.BtnSil.Location = new System.Drawing.Point(83, 423);
+            this.BtnSil.Name = "BtnSil";
+            this.BtnSil.Size = new System.Drawing.Size(157, 35);
+            this.BtnSil.TabIndex = 19;
+            this.BtnSil.Text = "Sil";
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
+            // 
+            // BtnGuncelle
+            // 
+            this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.BtnGuncelle.Appearance.Options.UseFont = true;
+            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.BtnGuncelle.Location = new System.Drawing.Point(83, 464);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(157, 35);
+            this.BtnGuncelle.TabIndex = 20;
+            this.BtnGuncelle.Text = "Güncelle";
+            // 
             // FrmUrunler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,6 +330,7 @@
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmUrunler";
             this.Text = "ÜRÜNLER";
+            this.Load += new System.EventHandler(this.FrmUrunler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -341,5 +371,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private System.Windows.Forms.RichTextBox RchDetay;
         private DevExpress.XtraEditors.SimpleButton BtnKaydet;
+        private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
+        private DevExpress.XtraEditors.SimpleButton BtnSil;
     }
 }

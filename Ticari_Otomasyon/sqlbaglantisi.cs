@@ -12,7 +12,7 @@ namespace Ticari_Otomasyon
     {
         public SqlConnection baglanti()
         {
-            SqlConnection baglan=new SqlConnection(@"Data Source = DESKTOP - KH7LR7T\SQLEXPRESS; Initial Catalog = DboTicariOtomasyon; Integrated Security = True; Trust Server Certificate = True");
+            SqlConnection baglan = new SqlConnection(@"Data Source = DESKTOP-KH7LR7T\SQLEXPRESS; Initial Catalog = DboTicariOtomasyon; Integrated Security = True;");
             baglan.Open();
             return baglan;
         }
