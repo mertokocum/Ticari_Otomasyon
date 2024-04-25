@@ -104,10 +104,10 @@ namespace Ticari_Otomasyon
         {
             // Müşteri adını çekmek için bir SQL sorgusu
             string musteriAdi = "";
-            SqlCommand komutAdi = new SqlCommand("SELECT Ad FROM TBL_MUSTERILER WHERE ID=@p1", bgl.baglanti());
-            komutAdi.Parameters.AddWithValue("@p1", TxtID.Text);
+            SqlCommand komut = new SqlCommand("SELECT Ad FROM TBL_MUSTERILER WHERE ID=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", TxtID.Text);
 
-            using (SqlDataReader dr = komutAdi.ExecuteReader())
+            using (SqlDataReader dr = komut.ExecuteReader())
             {
                 if (dr.Read())
                 {
@@ -137,5 +137,24 @@ namespace Ticari_Otomasyon
             }
         }
 
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("update TBL_MUSTERILER set AD=@P1,SOYAD=@P2,TELEFON=@P3,TELEFON2=@P4,TC=@P5,MAIL=@P6,IL=@P7,ILCE=@P8,VERGIDAIRE=@P9,ADRES=@P10 where ID=@P11", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", TxtAd.Text);
+            komut.Parameters.AddWithValue("@p2", TxtSoyad.Text);
+            komut.Parameters.AddWithValue("@p3", MskTelefon1.Text);
+            komut.Parameters.AddWithValue("@p4", MskTelefon2.Text);
+            komut.Parameters.AddWithValue("@p5", MskTC.Text);
+            komut.Parameters.AddWithValue("@p6", TxtMail.Text);
+            komut.Parameters.AddWithValue("@p7", Cmbil.Text);
+            komut.Parameters.AddWithValue("@p8", Cmbilce.Text);
+            komut.Parameters.AddWithValue("@p9", TxtVergi.Text);
+            komut.Parameters.AddWithValue("@p10", RchAdres.Text);
+            komut.Parameters.AddWithValue("@p11", TxtID.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Müşteri Bilgileri Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            listele();
+        }
     }
 }
