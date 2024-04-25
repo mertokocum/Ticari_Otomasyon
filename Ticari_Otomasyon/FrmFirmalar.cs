@@ -32,5 +32,33 @@ namespace Ticari_Otomasyon
         {
             firmalistesi();
         }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            if (dr != null)
+            {
+                TxtID.Text = dr["ID"].ToString();
+                TxtAd.Text = dr["AD"].ToString();
+                TxtYetkiliGorev.Text = dr["YETKILISTATU"].ToString();
+                TxtYetkili.Text = dr["YETKILIADSOYAD"].ToString();
+                MskYetkiliTC.Text = dr["YETKILITC"].ToString();
+                TxtSektor.Text = dr["SEKTOR"].ToString();
+                MskTelefon1.Text = dr["TELEFON1"].ToString();
+                MskTelefon2.Text = dr["TELEFON2"].ToString();
+                MskTelefon3.Text = dr["TELEFON3"].ToString();
+                TxtMail.Text = dr["MAIL"].ToString();
+                MskFax.Text = dr["FAX"].ToString();
+                Cmbil.Text = dr["IL"].ToString();
+                Cmbilce.Text = dr["ILCE"].ToString();
+                TxtVergi.Text = dr["VERGIDAIRE"].ToString();
+                RchAdres.Text = dr["ADRES"].ToString();
+                TxtKod1.Text = dr["OZELKOD1"].ToString();
+                TxtKod2.Text = dr["OZELKOD2"].ToString();
+                TxtKod3.Text = dr["OZELKOD3"].ToString();
+                
+
+            }
+        }
     }
 }
