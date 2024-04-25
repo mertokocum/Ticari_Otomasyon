@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Ticari_Otomasyon
 {
@@ -17,6 +18,19 @@ namespace Ticari_Otomasyon
             InitializeComponent();
         }
 
-        
+        private sqlbaglantisi bgl = new sqlbaglantisi();
+
+        void firmalistesi()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_FIRMALAR", bgl.baglanti());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gridControl1.DataSource = dt;
+        }
+
+        private void FrmFirmalar_Load(object sender, EventArgs e)
+        {
+            firmalistesi();
+        }
     }
 }
