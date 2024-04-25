@@ -102,14 +102,28 @@ namespace Ticari_Otomasyon
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
-            SqlCommand komut =
-                new SqlCommand(
-                    "Delete from TBL_MUSTERILER where ID=@p1", bgl.baglanti());
-            komut.Parameters.AddWithValue("@p1", TxtID.Text);
-            komut.ExecuteNonQuery();
-            bgl.baglanti().Close();
-            MessageBox.Show("Müşteri Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            listele();
+            // Kullanıcıdan onay almak için MessageBox kullan
+            var result = MessageBox.Show("Müşteriyi silmek istediğinizden emin misiniz?", "Müşteri Silme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            // Eğer kullanıcı 'Evet' cevabını verirse
+            if (result == DialogResult.Yes)
+            {
+                // Silme işlemini gerçekleştir
+                SqlCommand komut =
+                    new SqlCommand(
+                        "Delete from TBL_MUSTERILER where ID=@p1", bgl.baglanti());
+                komut.Parameters.AddWithValue("@p1", TxtID.Text);
+                komut.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                MessageBox.Show("Müşteri Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                listele();
+            }
+            // Eğer kullanıcı 'Hayır' cevabını verirse, işlem yapma
+            else if (result == DialogResult.No)
+            {
+                // Hiçbir şey yapma
+            }
+            
         }
     }
 }
