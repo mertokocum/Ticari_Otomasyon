@@ -79,5 +79,37 @@ namespace Ticari_Otomasyon
             MessageBox.Show("Müşteri Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             listele();
         }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            if (dr != null)
+            {
+                TxtID.Text = dr["ID"].ToString();
+                TxtAd.Text = dr["AD"].ToString();
+                TxtSoyad.Text = dr["SOYAD"].ToString();
+                MskTelefon1.Text = dr["TELEFON"].ToString();
+                MskTelefon2.Text = dr["TELEFON2"].ToString();
+                MskTC.Text = dr["TC"].ToString();
+                TxtMail.Text = dr["MAIL"].ToString();
+                Cmbil.Text = dr["IL"].ToString();
+                Cmbilce.Text = dr["ILCE"].ToString();
+                RchAdres.Text = dr["ADRES"].ToString();
+                TxtVergi.Text = dr["VERGIDAIRE"].ToString();
+
+            }
+        }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut =
+                new SqlCommand(
+                    "Delete from TBL_MUSTERILER where ID=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", TxtID.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Müşteri Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            listele();
+        }
     }
 }
