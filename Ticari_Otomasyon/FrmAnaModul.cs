@@ -39,7 +39,7 @@ namespace Ticari_Otomasyon
         //    fr = null; // fr nesnesini null yaparak bir sonraki açılışta yeniden oluşturulmasını sağlayın.
         //}
 
-         FrmMusteriler fr2;
+        FrmMusteriler fr2;
         private void BtnMusteriler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (fr2 == null)
@@ -53,6 +53,17 @@ namespace Ticari_Otomasyon
             {
                 // Form zaten açık ise, kullanıcıya odaklan.
                 fr2.Activate();
+            }
+        }
+
+        private FrmFirmalar fr3;
+        private void BtnFirmalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (fr3 == null)
+            {
+                fr3 = new FrmFirmalar();
+                fr3.MdiParent = this;
+                fr3.Show();
             }
         }
         //private void Fr2_FormClosed(object sender, FormClosedEventArgs e)

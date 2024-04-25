@@ -40,13 +40,13 @@
             this.BtnPersoneller = new DevExpress.XtraBars.BarButtonItem();
             this.BtnGiderler = new DevExpress.XtraBars.BarButtonItem();
             this.BtnKasa = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnBankalar = new DevExpress.XtraBars.BarButtonItem();
             this.BtnRehber = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnFaturalar = new DevExpress.XtraBars.BarButtonItem();
             this.BtnAyarlar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.BtnFaturalar = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -126,6 +126,7 @@
             this.BtnFirmalar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnFirmalar.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnFirmalar.Name = "BtnFirmalar";
+            this.BtnFirmalar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnFirmalar_ItemClick);
             // 
             // BtnPersoneller
             // 
@@ -157,6 +158,16 @@
             this.BtnKasa.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnKasa.Name = "BtnKasa";
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "NOTLAR";
+            this.barButtonItem1.Id = 15;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
             // BtnBankalar
             // 
             this.BtnBankalar.Caption = "BANKALAR";
@@ -176,6 +187,16 @@
             this.BtnRehber.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnRehber.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnRehber.Name = "BtnRehber";
+            // 
+            // BtnFaturalar
+            // 
+            this.BtnFaturalar.Caption = "FATURALAR";
+            this.BtnFaturalar.Id = 16;
+            this.BtnFaturalar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnFaturalar.ImageOptions.Image")));
+            this.BtnFaturalar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnFaturalar.ImageOptions.LargeImage")));
+            this.BtnFaturalar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.BtnFaturalar.ItemAppearance.Normal.Options.UseFont = true;
+            this.BtnFaturalar.Name = "BtnFaturalar";
             // 
             // BtnAyarlar
             // 
@@ -216,26 +237,6 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "NOTLAR";
-            this.barButtonItem1.Id = 15;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // BtnFaturalar
-            // 
-            this.BtnFaturalar.Caption = "FATURALAR";
-            this.BtnFaturalar.Id = 16;
-            this.BtnFaturalar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.BtnFaturalar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.BtnFaturalar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.BtnFaturalar.ItemAppearance.Normal.Options.UseFont = true;
-            this.BtnFaturalar.Name = "BtnFaturalar";
             // 
             // FrmAnaModul
             // 
