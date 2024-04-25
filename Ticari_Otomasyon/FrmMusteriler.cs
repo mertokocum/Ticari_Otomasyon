@@ -21,13 +21,13 @@ namespace Ticari_Otomasyon
 
         void listele()
         {
-            DataTable dt= new DataTable();
-            SqlDataAdapter da= new SqlDataAdapter("Select * From TBL_MUSTERILER",bgl.baglanti());
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select * From TBL_MUSTERILER", bgl.baglanti());
             da.Fill(dt);
             gridControl1.DataSource = dt;
         }
 
-        
+
 
         void sehirlistesi()
         {
@@ -49,7 +49,7 @@ namespace Ticari_Otomasyon
         {
             Cmbilce.Properties.Items.Clear();
             SqlCommand komut = new SqlCommand("Select ILCE From TBL_ILCELER where Sehir=@p1", bgl.baglanti());
-            komut.Parameters.AddWithValue("@p1", Cmbil.SelectedIndex+1);
+            komut.Parameters.AddWithValue("@p1", Cmbil.SelectedIndex + 1);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
             {
@@ -102,20 +102,32 @@ namespace Ticari_Otomasyon
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
-            // Kullanıcıdan onay almak için MessageBox kullan
-            var result = MessageBox.Show("Müşteriyi silmek istediğinizden emin misiniz?", "Müşteri Silme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            // Müşteri adını çekmek için bir SQL sorgusu
+            string musteriAdi = "";
+            SqlCommand komutAdi = new SqlCommand("SELECT Ad FROM TBL_MUSTERILER WHERE ID=@p1", bgl.baglanti());
+            komutAdi.Parameters.AddWithValue("@p1", TxtID.Text);
+
+            using (SqlDataReader dr = komutAdi.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    musteriAdi = dr["Ad"].ToString(); // 'Ad' sütunu müşteri adını içeriyor, bu isim sizin veritabanınıza bağlı olarak değişebilir
+                }
+            }
+            bgl.baglanti().Close();
+
+            // Kullanıcıdan onay almak için MessageBox kullan, müşteri adını göster
+            var result = MessageBox.Show(musteriAdi + " isimli müşteriyi silmek istediğinizden emin misiniz?", "Müşteri Silme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             // Eğer kullanıcı 'Evet' cevabını verirse
             if (result == DialogResult.Yes)
             {
-                // Silme işlemini gerçekleştir
-                SqlCommand komut =
-                    new SqlCommand(
-                        "Delete from TBL_MUSTERILER where ID=@p1", bgl.baglanti());
-                komut.Parameters.AddWithValue("@p1", TxtID.Text);
-                komut.ExecuteNonQuery();
+                // Müşteri silme işlemini gerçekleştir
+                SqlCommand komutSil = new SqlCommand("Delete from TBL_MUSTERILER where ID=@p1", bgl.baglanti());
+                komutSil.Parameters.AddWithValue("@p1", TxtID.Text);
+                komutSil.ExecuteNonQuery();
                 bgl.baglanti().Close();
-                MessageBox.Show("Müşteri Silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Müşteri silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 listele();
             }
             // Eğer kullanıcı 'Hayır' cevabını verirse, işlem yapma
@@ -123,7 +135,7 @@ namespace Ticari_Otomasyon
             {
                 // Hiçbir şey yapma
             }
-            
         }
+
     }
 }
