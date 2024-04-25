@@ -1,6 +1,6 @@
 ﻿namespace Ticari_Otomasyon
 {
-    partial class MÜŞTERİLER
+    partial class FrmMusteriler
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MÜŞTERİLER));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMusteriler));
             this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -47,6 +47,7 @@
             this.TxtID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.TxtVergi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.Cmbilce = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -56,18 +57,17 @@
             this.MskTelefon2 = new System.Windows.Forms.MaskedTextBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.TxtVergi = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtVergi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cmbilce.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cmbil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtVergi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnGuncelle
@@ -101,7 +101,8 @@
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(104, 76);
             this.BtnKaydet.TabIndex = 12;
-            this.BtnKaydet.Text = "Yeni\r\nÜrün";
+            this.BtnKaydet.Text = "Yeni\r\nMüşteri";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // RchAdres
             // 
@@ -270,6 +271,15 @@
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "groupControl1";
             // 
+            // TxtVergi
+            // 
+            this.TxtVergi.Location = new System.Drawing.Point(83, 308);
+            this.TxtVergi.Name = "TxtVergi";
+            this.TxtVergi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TxtVergi.Properties.Appearance.Options.UseFont = true;
+            this.TxtVergi.Size = new System.Drawing.Size(157, 24);
+            this.TxtVergi.TabIndex = 10;
+            // 
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -357,23 +367,14 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // TxtVergi
-            // 
-            this.TxtVergi.Location = new System.Drawing.Point(83, 308);
-            this.TxtVergi.Name = "TxtVergi";
-            this.TxtVergi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.TxtVergi.Properties.Appearance.Options.UseFont = true;
-            this.TxtVergi.Size = new System.Drawing.Size(157, 24);
-            this.TxtVergi.TabIndex = 10;
-            // 
-            // MÜŞTERİLER
+            // FrmMusteriler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 846);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
-            this.Name = "MÜŞTERİLER";
+            this.Name = "FrmMusteriler";
             this.Text = "MÜŞTERİLER";
             this.Load += new System.EventHandler(this.FrmMusteriler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TxtSoyad.Properties)).EndInit();
@@ -382,12 +383,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtVergi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cmbilce.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cmbil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtVergi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
