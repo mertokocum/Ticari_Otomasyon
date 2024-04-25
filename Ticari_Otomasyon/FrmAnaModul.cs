@@ -17,36 +17,36 @@ namespace Ticari_Otomasyon
             InitializeComponent();
         }
 
-        FrmUrunler fr;
+        FrmUrunler fr1;
         private void BtnUrunler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (fr == null)
+            if (fr1 == null || fr1.IsDisposed)
             {
-                fr = new FrmUrunler();
-                fr.MdiParent = this;
-                //fr.FormClosed += Fr_FormClosed; // FormClosed olayına bir event handler ekleyin.
-                fr.Show();
+                fr1 = new FrmUrunler();
+                fr1.MdiParent = this;
+                fr1.FormClosed += Fr1_FormClosed; // FormClosed olayına bir event handler ekleyin.
+                fr1.Show();
             }
             else
             {
                 // Form zaten açık ise, kullanıcıya odaklan.
-                fr.Activate();
+                fr1.Activate();
             }
         }
-        //private void Fr_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    fr.FormClosed -= Fr_FormClosed; // EventHandler'ı kaldırın, böylece çöp toplayıcı nesneyi temizleyebilir.
-        //    fr = null; // fr nesnesini null yaparak bir sonraki açılışta yeniden oluşturulmasını sağlayın.
-        //}
+        private void Fr1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Form kapatıldığında fr3 değişkenini null olarak ayarla
+            fr1 = null;
+        }
 
         FrmMusteriler fr2;
         private void BtnMusteriler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (fr2 == null)
+            if (fr2 == null || fr2.IsDisposed)
             {
                 fr2 = new FrmMusteriler();
                 fr2.MdiParent = this;
-                //fr2.FormClosed += Fr_FormClosed; // FormClosed olayına bir event handler ekleyin.
+                fr2.FormClosed += Fr2_FormClosed; // FormClosed olayına bir event handler ekleyin.
                 fr2.Show();
             }
             else
@@ -55,21 +55,35 @@ namespace Ticari_Otomasyon
                 fr2.Activate();
             }
         }
+        private void Fr2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Form kapatıldığında fr3 değişkenini null olarak ayarla
+            fr2 = null;
+        }
 
-        private FrmFirmalar fr3;
+        FrmFirmalar fr3;
+        
         private void BtnFirmalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (fr3 == null)
+            if (fr3 == null || fr3.IsDisposed)
             {
                 fr3 = new FrmFirmalar();
                 fr3.MdiParent = this;
+                fr3.FormClosed += Fr3_FormClosed; // Form kapatıldığında olayı yakala
                 fr3.Show();
             }
+            else
+            {
+                // Form zaten açık ise, kullanıcıya odaklan.
+                fr3.Activate();
+            }
         }
-        //private void Fr2_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    fr2.FormClosed -= Fr2_FormClosed; // EventHandler'ı kaldırın, böylece çöp toplayıcı nesneyi temizleyebilir.
-        //    fr2 = null; // fr nesnesini null yaparak bir sonraki açılışta yeniden oluşturulmasını sağlayın.
-        //}
+
+        private void Fr3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Form kapatıldığında fr3 değişkenini null olarak ayarla
+            fr3 = null;
+        }
+
     }
 }
