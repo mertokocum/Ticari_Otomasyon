@@ -480,7 +480,8 @@
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(104, 76);
             this.BtnKaydet.TabIndex = 31;
-            this.BtnKaydet.Text = "Yeni\r\nMüşteri";
+            this.BtnKaydet.Text = "Yeni\r\nFirma";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // labelControl26
             // 

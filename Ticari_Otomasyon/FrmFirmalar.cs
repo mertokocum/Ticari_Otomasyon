@@ -60,5 +60,34 @@ namespace Ticari_Otomasyon
 
             }
         }
+
+        private void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut =
+                new SqlCommand(
+                    "insert into TBL_FIRMALAR (AD,YETKILISTATU,YETKILIADSOYAD,YETKILITC,SEKTOR,TELEFON1,TELEFON2,TELEFON3,MAIL,FAX,IL,ILCE,VERGIDAIRE,ADRES,OZELKOD1,OZELKOD2,OZELKOD3 ) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17)",
+                    bgl.baglanti());
+            komut.Parameters.AddWithValue("@P1", TxtAd.Text);
+            komut.Parameters.AddWithValue("@P2", TxtYetkiliGorev.Text);
+            komut.Parameters.AddWithValue("@P3", TxtYetkili.Text);
+            komut.Parameters.AddWithValue("@P4", MskYetkiliTC.Text);
+            komut.Parameters.AddWithValue("@P5", TxtSektor.Text);
+            komut.Parameters.AddWithValue("@P6", MskTelefon1.Text);
+            komut.Parameters.AddWithValue("@P7", MskTelefon2.Text);
+            komut.Parameters.AddWithValue("@P8", MskTelefon3.Text);
+            komut.Parameters.AddWithValue("@P9", TxtMail.Text);
+            komut.Parameters.AddWithValue("@P10", MskFax.Text);
+            komut.Parameters.AddWithValue("@P11", Cmbil.Text);
+            komut.Parameters.AddWithValue("@P12", Cmbilce.Text);
+            komut.Parameters.AddWithValue("@P13", TxtVergi.Text);
+            komut.Parameters.AddWithValue("@P14", RchAdres.Text);
+            komut.Parameters.AddWithValue("@P15", TxtKod1.Text);
+            komut.Parameters.AddWithValue("@P16", TxtKod2.Text);
+            komut.Parameters.AddWithValue("@P17", TxtKod3.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Firma Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            firmalistesi();
+        }
     }
 }
