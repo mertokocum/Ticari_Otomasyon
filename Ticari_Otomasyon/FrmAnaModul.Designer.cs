@@ -137,6 +137,7 @@
             this.BtnPersoneller.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnPersoneller.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnPersoneller.Name = "BtnPersoneller";
+            this.BtnPersoneller.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPersoneller_ItemClick);
             // 
             // BtnGiderler
             // 

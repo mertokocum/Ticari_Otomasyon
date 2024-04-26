@@ -85,5 +85,27 @@ namespace Ticari_Otomasyon
             fr3 = null;
         }
 
+        FrmPersonel fr4;
+        private void BtnPersoneller_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (fr4 == null || fr4.IsDisposed)
+            {
+                fr4 = new FrmPersonel();
+                fr4.MdiParent = this;
+                fr4.FormClosed += Fr4_FormClosed; // Form kapatıldığında olayı yakala
+                fr4.Show();
+            }
+            else
+            {
+                // Form zaten açık ise, kullanıcıya odaklan.
+                fr4.Activate();
+            }
+        }
+        private void Fr4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Form kapatıldığında fr3 değişkenini null olarak ayarla
+            fr4 = null;
+        }
+
     }
 }
