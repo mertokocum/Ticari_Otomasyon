@@ -44,11 +44,11 @@ namespace Ticari_Otomasyon
             MskTelefon3.Text = "";
             MskFax.Text = "";
             MskYetkiliTC.Text = "";
-            RchKod1.Text = "";
             Cmbil.Text = "";
             Cmbilce.Text = "";
-            RchKod2.Text = "";
-            RchKod3.Text = "";
+            //RchKod1.Text = "";
+            //RchKod2.Text = "";
+            //RchKod3.Text = "";
             RchAdres.Text = "";
 
         }
@@ -62,10 +62,37 @@ namespace Ticari_Otomasyon
             }
             bgl.baglanti().Close();
         }
+
+        void carikodaciklamalar()
+        {
+            SqlCommand komut1 = new SqlCommand("Select FIRMAKOD1 from Tbl_kodlar", bgl.baglanti());
+            SqlDataReader dr1 = komut1.ExecuteReader();
+            while (dr1.Read())
+            {
+                RchKod1.Text = dr1[0].ToString();
+            }
+            bgl.baglanti().Close();
+            SqlCommand komut2 = new SqlCommand("Select FIRMAKOD2 from Tbl_kodlar", bgl.baglanti());
+            SqlDataReader dr2 = komut2.ExecuteReader();
+            while (dr2.Read())
+            {
+                RchKod2.Text = dr2[0].ToString();
+            }
+            bgl.baglanti().Close();
+            SqlCommand komut3 = new SqlCommand("Select FIRMAKOD3 from Tbl_kodlar", bgl.baglanti());
+            SqlDataReader dr3 = komut3.ExecuteReader();
+            while (dr3.Read())
+            {
+                RchKod3.Text = dr3[0].ToString();
+            }
+            bgl.baglanti().Close();
+
+        }
         private void FrmFirmalar_Load(object sender, EventArgs e)
         {
             firmalistesi();
             sehirlistesi();
+            carikodaciklamalar();
             temizle();
         }
         private void Cmbil_Properties_SelectedIndexChanged(object sender, EventArgs e)
@@ -142,6 +169,16 @@ namespace Ticari_Otomasyon
             temizle();
         }
 
-        
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("delete from TBL_FIRMALAR where ID=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1",TxtID.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            firmalistesi();
+            temizle();
+            MessageBox.Show("Firma Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+
+        }
     }
 }
