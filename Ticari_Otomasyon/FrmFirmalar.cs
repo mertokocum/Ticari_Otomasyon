@@ -27,11 +27,62 @@ namespace Ticari_Otomasyon
             da.Fill(dt);
             gridControl1.DataSource = dt;
         }
+        void temizle()
+        {
+            TxtAd.Text = "";
+            TxtID.Text = "";
+            TxtKod1.Text = "";
+            TxtKod2.Text = "";
+            TxtKod3.Text = "";
+            TxtMail.Text = "";
+            TxtSektor.Text = "";
+            TxtVergi.Text = "";
+            TxtYetkili.Text = "";
+            TxtYetkiliGorev.Text = "";
+            MskTelefon1.Text = "";
+            MskTelefon2.Text = "";
+            MskTelefon3.Text = "";
+            MskFax.Text = "";
+            MskYetkiliTC.Text = "";
+            RchKod1.Text = "";
+            Cmbil.Text = "";
+            Cmbilce.Text = "";
+            RchKod2.Text = "";
+            RchKod3.Text = "";
+            RchAdres.Text = "";
 
+        }
+        void sehirlistesi()
+        {
+            SqlCommand komut = new SqlCommand("Select Sehir From TBL_ILLER", bgl.baglanti());
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                Cmbil.Properties.Items.Add(dr[0]);
+            }
+            bgl.baglanti().Close();
+        }
         private void FrmFirmalar_Load(object sender, EventArgs e)
         {
             firmalistesi();
+            sehirlistesi();
+            temizle();
         }
+        private void Cmbil_Properties_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+                Cmbilce.Properties.Items.Clear();
+                SqlCommand komut = new SqlCommand("Select ILCE From TBL_ILCELER where Sehir=@p1", bgl.baglanti());
+                komut.Parameters.AddWithValue("@p1", Cmbil.SelectedIndex + 1);
+                SqlDataReader dr = komut.ExecuteReader();
+                while (dr.Read())
+                {
+                    Cmbilce.Properties.Items.Add(dr[0]);
+                }
+                bgl.baglanti().Close();
+            
+        }
+
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -88,6 +139,9 @@ namespace Ticari_Otomasyon
             bgl.baglanti().Close();
             MessageBox.Show("Firma Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             firmalistesi();
+            temizle();
         }
+
+        
     }
 }

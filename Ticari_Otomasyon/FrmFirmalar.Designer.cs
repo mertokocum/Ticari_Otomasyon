@@ -539,6 +539,7 @@
             this.Cmbil.Properties.Appearance.Options.UseFont = true;
             this.Cmbil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Cmbil.Properties.SelectedIndexChanged += new System.EventHandler(this.Cmbil_Properties_SelectedIndexChanged);
             this.Cmbil.Size = new System.Drawing.Size(157, 24);
             this.Cmbil.TabIndex = 17;
             // 
