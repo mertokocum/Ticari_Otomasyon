@@ -227,6 +227,7 @@
             this.TxtID.Name = "TxtID";
             this.TxtID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtID.Properties.Appearance.Options.UseFont = true;
+            this.TxtID.Properties.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(157, 24);
             this.TxtID.TabIndex = 1;
             // 

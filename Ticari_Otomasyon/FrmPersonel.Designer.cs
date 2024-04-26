@@ -74,6 +74,7 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // gridControl1
             // 
@@ -135,6 +136,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Cmbil.Size = new System.Drawing.Size(157, 24);
             this.Cmbil.TabIndex = 8;
+            this.Cmbil.SelectedIndexChanged += new System.EventHandler(this.Cmbil_SelectedIndexChanged);
             // 
             // TxtMail
             // 
@@ -197,6 +199,7 @@
             this.BtnTemizle.Size = new System.Drawing.Size(104, 61);
             this.BtnTemizle.TabIndex = 66;
             this.BtnTemizle.Text = "Temizle";
+            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
             // 
             // BtnGuncelle
             // 
@@ -208,6 +211,7 @@
             this.BtnGuncelle.Size = new System.Drawing.Size(120, 61);
             this.BtnGuncelle.TabIndex = 65;
             this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // BtnSil
             // 
@@ -219,17 +223,19 @@
             this.BtnSil.Size = new System.Drawing.Size(120, 61);
             this.BtnSil.TabIndex = 64;
             this.BtnSil.Text = "Sil";
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // BtnKaydet
             // 
             this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnKaydet.Appearance.Options.UseFont = true;
             this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
-            this.BtnKaydet.Location = new System.Drawing.Point(53, 421);
+            this.BtnKaydet.Location = new System.Drawing.Point(23, 421);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(104, 61);
             this.BtnKaydet.TabIndex = 63;
-            this.BtnKaydet.Text = "Yeni\r\nFirma";
+            this.BtnKaydet.Text = "Yeni\r\nPersonel";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // RchAdres
             // 
@@ -342,6 +348,7 @@
             this.TxtID.Name = "TxtID";
             this.TxtID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtID.Properties.Appearance.Options.UseFont = true;
+            this.TxtID.Properties.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(157, 24);
             this.TxtID.TabIndex = 1;
             // 
@@ -364,6 +371,7 @@
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmPersonel";
             this.Text = "PERSONELLER";
+            this.Load += new System.EventHandler(this.FrmPersonel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtGorev.Properties)).EndInit();

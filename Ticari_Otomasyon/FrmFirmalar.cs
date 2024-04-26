@@ -186,13 +186,41 @@ namespace Ticari_Otomasyon
             }
             else
             {
-                SqlCommand komut = new SqlCommand("delete from TBL_FIRMALAR where ID=@p1", bgl.baglanti());
-                komut.Parameters.AddWithValue("@p1", TxtID.Text);
-                komut.ExecuteNonQuery();
+                // PERSONEL adını çekmek için bir SQL sorgusu
+                string firmaAdi = "";
+                SqlCommand adkomut = new SqlCommand("SELECT AD FROM TBL_FIRMALAR WHERE ID=@p1", bgl.baglanti());
+                adkomut.Parameters.AddWithValue("@p1", TxtID.Text);
+
+                using (SqlDataReader dr = adkomut.ExecuteReader())
+                {
+                    if (dr.Read())
+                    {
+                        firmaAdi = dr["Ad"].ToString(); // 'Ad' sütunu müşteri adını içeriyor, bu isim sizin veritabanınıza bağlı olarak değişebilir
+                    }
+                }
                 bgl.baglanti().Close();
-                firmalistesi();
-                temizle();
-                MessageBox.Show("Firma Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+
+                // Kullanıcıdan onay almak için MessageBox kullan, müşteri adını göster
+                var result = MessageBox.Show(firmaAdi + " isimli firmayı silmek istediğinizden emin misiniz?", "Firma Silme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                // Eğer kullanıcı 'Evet' cevabını verirse
+                if (result == DialogResult.Yes)
+                {
+                    // personel silme işlemini gerçekleştir
+                    SqlCommand komut = new SqlCommand("delete from TBL_FIRMALAR where ID=@p1", bgl.baglanti());
+                    komut.Parameters.AddWithValue("@p1", TxtID.Text);
+                    komut.ExecuteNonQuery();
+                    bgl.baglanti().Close();
+                    firmalistesi();
+                    temizle();
+                    MessageBox.Show("Firma Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+                // Eğer kullanıcı 'Hayır' cevabını verirse, işlem yapma
+                else if (result == DialogResult.No)
+                {
+                    // Hiçbir şey yapma
+                }
+
             }
 
 
