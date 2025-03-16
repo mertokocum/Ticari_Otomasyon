@@ -18,7 +18,10 @@ namespace Ticari_Otomasyon
             InitializeComponent();
         }
         sqlbaglantisi bgl = new sqlbaglantisi();
-
+        private void FrmYeniKullanici_Load(object sender, EventArgs e)
+        {
+            TxtAd.Focus();
+        }
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             SqlCommand komut =
@@ -45,5 +48,7 @@ namespace Ticari_Otomasyon
         {
             this.Close(); // Formu kapat
         }
+
+        
     }
 }

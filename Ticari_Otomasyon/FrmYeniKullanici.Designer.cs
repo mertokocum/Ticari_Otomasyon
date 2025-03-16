@@ -67,7 +67,7 @@
             this.TxtGorev.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtGorev.Properties.Appearance.Options.UseFont = true;
             this.TxtGorev.Size = new System.Drawing.Size(238, 24);
-            this.TxtGorev.TabIndex = 41;
+            this.TxtGorev.TabIndex = 8;
             // 
             // labelControl11
             // 
@@ -98,7 +98,7 @@
             this.Cmbilce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Cmbilce.Size = new System.Drawing.Size(238, 24);
-            this.Cmbilce.TabIndex = 40;
+            this.Cmbilce.TabIndex = 7;
             // 
             // Cmbil
             // 
@@ -109,7 +109,7 @@
             this.Cmbil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Cmbil.Size = new System.Drawing.Size(238, 24);
-            this.Cmbil.TabIndex = 39;
+            this.Cmbil.TabIndex = 6;
             // 
             // TxtMail
             // 
@@ -118,7 +118,7 @@
             this.TxtMail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtMail.Properties.Appearance.Options.UseFont = true;
             this.TxtMail.Size = new System.Drawing.Size(238, 24);
-            this.TxtMail.TabIndex = 38;
+            this.TxtMail.TabIndex = 5;
             // 
             // MskTC
             // 
@@ -127,7 +127,7 @@
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
             this.MskTC.Size = new System.Drawing.Size(238, 25);
-            this.MskTC.TabIndex = 36;
+            this.MskTC.TabIndex = 4;
             this.MskTC.ValidatingType = typeof(int);
             // 
             // RchAdres
@@ -135,7 +135,7 @@
             this.RchAdres.Location = new System.Drawing.Point(73, 301);
             this.RchAdres.Name = "RchAdres";
             this.RchAdres.Size = new System.Drawing.Size(238, 96);
-            this.RchAdres.TabIndex = 43;
+            this.RchAdres.TabIndex = 9;
             this.RchAdres.Text = "";
             // 
             // labelControl8
@@ -195,7 +195,7 @@
             this.TxtSoyad.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtSoyad.Properties.Appearance.Options.UseFont = true;
             this.TxtSoyad.Size = new System.Drawing.Size(238, 24);
-            this.TxtSoyad.TabIndex = 33;
+            this.TxtSoyad.TabIndex = 2;
             // 
             // labelControl3
             // 
@@ -214,7 +214,7 @@
             this.TxtAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtAd.Properties.Appearance.Options.UseFont = true;
             this.TxtAd.Size = new System.Drawing.Size(238, 24);
-            this.TxtAd.TabIndex = 32;
+            this.TxtAd.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -233,7 +233,7 @@
             this.MskTelefon1.Mask = "(999) 000-0000";
             this.MskTelefon1.Name = "MskTelefon1";
             this.MskTelefon1.Size = new System.Drawing.Size(238, 25);
-            this.MskTelefon1.TabIndex = 34;
+            this.MskTelefon1.TabIndex = 3;
             // 
             // TxtID
             // 
@@ -243,7 +243,7 @@
             this.TxtID.Properties.Appearance.Options.UseFont = true;
             this.TxtID.Properties.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(238, 24);
-            this.TxtID.TabIndex = 30;
+            this.TxtID.TabIndex = 13;
             // 
             // labelControl1
             // 
@@ -263,7 +263,7 @@
             this.BtnKaydet.Location = new System.Drawing.Point(340, 301);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(141, 45);
-            this.BtnKaydet.TabIndex = 64;
+            this.BtnKaydet.TabIndex = 10;
             this.BtnKaydet.Text = "Personeli Ekle";
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
@@ -275,7 +275,7 @@
             this.BtnSil.Location = new System.Drawing.Point(340, 352);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(141, 45);
-            this.BtnSil.TabIndex = 65;
+            this.BtnSil.TabIndex = 11;
             this.BtnSil.Text = "İptal";
             this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
@@ -308,6 +308,7 @@
             this.Controls.Add(this.labelControl1);
             this.Name = "FrmYeniKullanici";
             this.Text = "FrmYeniKullanici";
+            this.Load += new System.EventHandler(this.FrmYeniKullanici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TxtGorev.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cmbilce.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cmbil.Properties)).EndInit();
