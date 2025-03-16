@@ -75,12 +75,7 @@ namespace Ticari_Otomasyon
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            if (TxtID.Text == "")
-            {
-                MessageBox.Show("Seçim Yapmadınız", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
+            
                 SqlCommand komut =
                     new SqlCommand(
                         "insert into TBL_PERSONELLER (AD,SOYAD,TELEFON,TC,MAIL,IL,ILCE,GOREV,ADRES) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9)",
@@ -99,7 +94,7 @@ namespace Ticari_Otomasyon
                 MessageBox.Show("Personel Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 listele();
                 temizle();
-            }
+            
             
         }
 
