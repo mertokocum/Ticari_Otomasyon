@@ -19,7 +19,7 @@ namespace Ticari_Otomasyon
         }
         sqlbaglantisi bgl = new sqlbaglantisi();
 
-        void PersonelListele()
+        void listele()
         {
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select * From TBL_PERSONELLER", bgl.baglanti());
@@ -53,7 +53,7 @@ namespace Ticari_Otomasyon
 
         private void FrmPersonel_Load(object sender, EventArgs e)
         {
-            PersonelListele();
+            listele();
             sehirlistesi();
             temizle();
         }
@@ -75,6 +75,12 @@ namespace Ticari_Otomasyon
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
+            if (TxtID.Text == "")
+            {
+                MessageBox.Show("Seçim Yapmadınız", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
                 SqlCommand komut =
                     new SqlCommand(
                         "insert into TBL_PERSONELLER (AD,SOYAD,TELEFON,TC,MAIL,IL,ILCE,GOREV,ADRES) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9)",
@@ -91,8 +97,10 @@ namespace Ticari_Otomasyon
                 komut.ExecuteNonQuery();
                 bgl.baglanti().Close();
                 MessageBox.Show("Personel Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                PersonelListele();
+                listele();
                 temizle();
+            }
+            
         }
 
         private void gridView1_FocusedRowChanged(object sender,
@@ -149,7 +157,7 @@ namespace Ticari_Otomasyon
                     komutSil.ExecuteNonQuery();
                     bgl.baglanti().Close();
                     MessageBox.Show("Personel silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    PersonelListele();
+                    listele();
                     temizle();
                 }
                 // Eğer kullanıcı 'Hayır' cevabını verirse, işlem yapma
@@ -183,7 +191,7 @@ namespace Ticari_Otomasyon
                 komut.ExecuteNonQuery();
                 bgl.baglanti().Close();
                 MessageBox.Show("Personel Bilgileri Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                PersonelListele();
+                listele();
                 temizle();
             }
             
