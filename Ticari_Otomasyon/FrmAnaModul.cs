@@ -107,5 +107,27 @@ namespace Ticari_Otomasyon
             fr4 = null;
         }
 
+        FrmRehber fr5;
+
+        private void BtnRehber_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (fr5 == null || fr5.IsDisposed)
+            {
+                fr5 = new FrmRehber();
+                fr5.MdiParent = this;
+                fr5.FormClosed += Fr5_FormClosed; // Form kapatıldığında olayı yakala
+                fr5.Show();
+            }
+            else
+            {
+                // Form zaten açık ise, kullanıcıya odaklan.
+                fr5.Activate();
+            }
+        }
+        private void Fr5_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Form kapatıldığında fr5 değişkenini null olarak ayarla
+            fr5 = null;
+        }
     }
 }
