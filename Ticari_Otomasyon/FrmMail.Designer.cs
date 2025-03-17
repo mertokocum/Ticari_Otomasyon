@@ -97,7 +97,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::Ticari_Otomasyon.Properties.Resources.mailbg2;
+            //this.panel1.BackgroundImage = global::Ticari_Otomasyon.Properties.Resources.mailbg2;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(0, 0);
