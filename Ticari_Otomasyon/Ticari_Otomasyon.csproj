@@ -98,11 +98,17 @@
     <Compile Include="FrmUrunler.Designer.cs">
       <DependentUpon>FrmUrunler.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmYeniKullanici.cs">
+    <Compile Include="FrmYeniPersonel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmYeniKullanici.Designer.cs">
-      <DependentUpon>FrmYeniKullanici.cs</DependentUpon>
+    <Compile Include="FrmYeniPersonel.Designer.cs">
+      <DependentUpon>FrmYeniPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmYeniUrun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmYeniUrun.Designer.cs">
+      <DependentUpon>FrmYeniUrun.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,8 +136,11 @@
     <EmbeddedResource Include="FrmUrunler.resx">
       <DependentUpon>FrmUrunler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmYeniKullanici.resx">
-      <DependentUpon>FrmYeniKullanici.cs</DependentUpon>
+    <EmbeddedResource Include="FrmYeniPersonel.resx">
+      <DependentUpon>FrmYeniPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmYeniUrun.resx">
+      <DependentUpon>FrmYeniUrun.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

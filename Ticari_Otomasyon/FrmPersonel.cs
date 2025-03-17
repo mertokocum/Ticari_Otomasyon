@@ -76,7 +76,7 @@ namespace Ticari_Otomasyon
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             // Yeni kullanıcı ekleme formunu aç
-            FrmYeniKullanici yeniKullaniciFormu = new FrmYeniKullanici();
+            FrmYeniPersonel yeniKullaniciFormu = new FrmYeniPersonel();
             yeniKullaniciFormu.ShowDialog(); // Modally form açılır
 
             // Yeni kullanıcı eklenip form kapandığında listeyi güncelle

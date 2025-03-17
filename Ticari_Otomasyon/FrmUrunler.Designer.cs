@@ -32,6 +32,7 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -51,8 +52,8 @@
             this.TxtAd = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.MskYil = new System.Windows.Forms.MaskedTextBox();
-            this.TxtID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.TxtID = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -85,6 +86,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.TxtID);
+            this.groupControl1.Controls.Add(this.BtnTemizle);
             this.groupControl1.Controls.Add(this.BtnGuncelle);
             this.groupControl1.Controls.Add(this.BtnSil);
             this.groupControl1.Controls.Add(this.BtnKaydet);
@@ -104,7 +107,6 @@
             this.groupControl1.Controls.Add(this.TxtAd);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.MskYil);
-            this.groupControl1.Controls.Add(this.TxtID);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Location = new System.Drawing.Point(1622, 0);
             this.groupControl1.Name = "groupControl1";
@@ -112,14 +114,26 @@
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "groupControl1";
             // 
+            // BtnTemizle
+            // 
+            this.BtnTemizle.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.BtnTemizle.Appearance.Options.UseFont = true;
+            this.BtnTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnTemizle.ImageOptions.Image")));
+            this.BtnTemizle.Location = new System.Drawing.Point(139, 462);
+            this.BtnTemizle.Name = "BtnTemizle";
+            this.BtnTemizle.Size = new System.Drawing.Size(111, 52);
+            this.BtnTemizle.TabIndex = 67;
+            this.BtnTemizle.Text = "Temizle";
+            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
+            // 
             // BtnGuncelle
             // 
             this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnGuncelle.Appearance.Options.UseFont = true;
             this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(133, 511);
+            this.BtnGuncelle.Location = new System.Drawing.Point(20, 404);
             this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(120, 35);
+            this.BtnGuncelle.Size = new System.Drawing.Size(230, 52);
             this.BtnGuncelle.TabIndex = 20;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
@@ -129,9 +143,9 @@
             this.BtnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnSil.Appearance.Options.UseFont = true;
             this.BtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSil.ImageOptions.Image")));
-            this.BtnSil.Location = new System.Drawing.Point(133, 470);
+            this.BtnSil.Location = new System.Drawing.Point(20, 462);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(120, 35);
+            this.BtnSil.Size = new System.Drawing.Size(111, 52);
             this.BtnSil.TabIndex = 19;
             this.BtnSil.Text = "Sil";
             this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
@@ -140,10 +154,10 @@
             // 
             this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnKaydet.Appearance.Options.UseFont = true;
-            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
-            this.BtnKaydet.Location = new System.Drawing.Point(23, 470);
+            this.BtnKaydet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnKaydet.ImageOptions.SvgImage")));
+            this.BtnKaydet.Location = new System.Drawing.Point(20, 520);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(104, 76);
+            this.BtnKaydet.Size = new System.Drawing.Size(230, 52);
             this.BtnKaydet.TabIndex = 18;
             this.BtnKaydet.Text = "Yeni\r\nÜrün";
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
@@ -304,15 +318,6 @@
             this.MskYil.TabIndex = 9;
             this.MskYil.ValidatingType = typeof(int);
             // 
-            // TxtID
-            // 
-            this.TxtID.Location = new System.Drawing.Point(83, 35);
-            this.TxtID.Name = "TxtID";
-            this.TxtID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.TxtID.Properties.Appearance.Options.UseFont = true;
-            this.TxtID.Size = new System.Drawing.Size(157, 24);
-            this.TxtID.TabIndex = 1;
-            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -322,6 +327,16 @@
             this.labelControl1.Size = new System.Drawing.Size(21, 18);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ID:";
+            // 
+            // TxtID
+            // 
+            this.TxtID.Location = new System.Drawing.Point(83, 35);
+            this.TxtID.Name = "TxtID";
+            this.TxtID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TxtID.Properties.Appearance.Options.UseFont = true;
+            this.TxtID.Properties.ReadOnly = true;
+            this.TxtID.Size = new System.Drawing.Size(157, 24);
+            this.TxtID.TabIndex = 68;
             // 
             // FrmUrunler
             // 
@@ -355,7 +370,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit TxtID;
         private System.Windows.Forms.MaskedTextBox MskYil;
         private DevExpress.XtraEditors.TextEdit TxtAd;
         private DevExpress.XtraEditors.LabelControl labelControl2;
@@ -375,5 +389,7 @@
         private DevExpress.XtraEditors.SimpleButton BtnKaydet;
         private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
         private DevExpress.XtraEditors.SimpleButton BtnSil;
+        private DevExpress.XtraEditors.SimpleButton BtnTemizle;
+        private DevExpress.XtraEditors.TextEdit TxtID;
     }
 }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Ticari_Otomasyon
 {
-    public partial class FrmYeniKullanici : Form
+    public partial class FrmYeniPersonel : Form
     {
-        public FrmYeniKullanici()
+        public FrmYeniPersonel()
         {
             InitializeComponent();
         }
