@@ -52,7 +52,7 @@
             this.TxtID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.TxtExtralar = new DevExpress.XtraEditors.TextEdit();
+            this.TxtEkstra = new DevExpress.XtraEditors.TextEdit();
             this.TxtMaaslar = new DevExpress.XtraEditors.TextEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -65,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtExtralar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtEkstra.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMaaslar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -93,6 +93,7 @@
             this.BtnGuncelle.Size = new System.Drawing.Size(230, 61);
             this.BtnGuncelle.TabIndex = 65;
             this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // BtnSil
             // 
@@ -376,7 +377,7 @@
             this.groupControl1.Controls.Add(this.BtnGuncelle);
             this.groupControl1.Controls.Add(this.BtnSil);
             this.groupControl1.Controls.Add(this.BtnKaydet);
-            this.groupControl1.Controls.Add(this.TxtExtralar);
+            this.groupControl1.Controls.Add(this.TxtEkstra);
             this.groupControl1.Controls.Add(this.TxtMaaslar);
             this.groupControl1.Controls.Add(this.TxtInternet);
             this.groupControl1.Controls.Add(this.labelControl11);
@@ -401,14 +402,14 @@
             this.groupControl1.Size = new System.Drawing.Size(270, 834);
             this.groupControl1.TabIndex = 7;
             // 
-            // TxtExtralar
+            // TxtEkstra
             // 
-            this.TxtExtralar.Location = new System.Drawing.Point(83, 275);
-            this.TxtExtralar.Name = "TxtExtralar";
-            this.TxtExtralar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.TxtExtralar.Properties.Appearance.Options.UseFont = true;
-            this.TxtExtralar.Size = new System.Drawing.Size(157, 24);
-            this.TxtExtralar.TabIndex = 10;
+            this.TxtEkstra.Location = new System.Drawing.Point(83, 275);
+            this.TxtEkstra.Name = "TxtEkstra";
+            this.TxtEkstra.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TxtEkstra.Properties.Appearance.Options.UseFont = true;
+            this.TxtEkstra.Size = new System.Drawing.Size(157, 24);
+            this.TxtEkstra.TabIndex = 10;
             // 
             // TxtMaaslar
             // 
@@ -456,7 +457,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtExtralar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtEkstra.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMaaslar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -491,7 +492,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.TextEdit TxtExtralar;
+        private DevExpress.XtraEditors.TextEdit TxtEkstra;
         private DevExpress.XtraEditors.TextEdit TxtMaaslar;
     }
 }

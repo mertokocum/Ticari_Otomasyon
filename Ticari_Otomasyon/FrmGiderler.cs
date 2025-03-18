@@ -37,7 +37,7 @@ namespace Ticari_Otomasyon
             CmbYil.Text = "";
             TxtDogalgaz.Text = "";
             TxtElektrik.Text = "";
-            TxtExtralar.Text = "";
+            TxtEkstra.Text = "";
             TxtID.Text = "";
             TxtInternet.Text = "";
             TxtMaaslar.Text = "";
@@ -68,7 +68,7 @@ namespace Ticari_Otomasyon
                 TxtDogalgaz.Text = dr["DOGALGAZ"].ToString();
                 TxtInternet.Text = dr["INTERNET"].ToString();
                 TxtMaaslar.Text = dr["MAASLAR"].ToString();
-                TxtExtralar.Text = dr["EKSTRA"].ToString();
+                TxtEkstra.Text = dr["EKSTRA"].ToString();
                 RchNotlar.Text = dr["NOTLAR"].ToString();
             }
         }
@@ -80,13 +80,48 @@ namespace Ticari_Otomasyon
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
-            SqlCommand komutSil = new SqlCommand("Delete From TBL_GIDERLER where GIDERID=@p1", bgl.baglanti());
-            komutSil.Parameters.AddWithValue("@p1", TxtID.Text);
-            komutSil.ExecuteNonQuery();
-            bgl.baglanti().Close();
-            giderListesi();
-            MessageBox.Show("Gider silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            temizle();
+            if (TxtID.Text == "")
+            {
+                MessageBox.Show("Seçim Yapmadınız", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                SqlCommand komutSil = new SqlCommand("Delete From TBL_GIDERLER where GIDERID=@p1", bgl.baglanti());
+                komutSil.Parameters.AddWithValue("@p1", TxtID.Text);
+                komutSil.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                giderListesi();
+                MessageBox.Show("Gider silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                temizle();
+            }
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            if (TxtID.Text == "")
+            {
+                MessageBox.Show("Seçim Yapmadınız", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                SqlCommand komutGuncelle = new SqlCommand("Update TBL_GIDERLER set AY=@p1, YIL=@p2, ELEKTRIK=@p3, SU=@p4, DOGALGAZ=@p5, INTERNET=@p6, MAASLAR=@p7, EKSTRA=@p8, NOTLAR=@p9 where GIDERID=@p10", bgl.baglanti());
+
+                komutGuncelle.Parameters.AddWithValue("@p1", CmbAy.Text);
+                komutGuncelle.Parameters.AddWithValue("@p2", CmbYil.Text);
+                komutGuncelle.Parameters.AddWithValue("@p3", decimal.Parse(TxtElektrik.Text));
+                komutGuncelle.Parameters.AddWithValue("@p4", decimal.Parse(TxtSu.Text));
+                komutGuncelle.Parameters.AddWithValue("@p5", decimal.Parse(TxtDogalgaz.Text));
+                komutGuncelle.Parameters.AddWithValue("@p6", decimal.Parse(TxtInternet.Text));
+                komutGuncelle.Parameters.AddWithValue("@p7", decimal.Parse(TxtMaaslar.Text));
+                komutGuncelle.Parameters.AddWithValue("@p8", decimal.Parse(TxtEkstra.Text));
+                komutGuncelle.Parameters.AddWithValue("@p9", RchNotlar.Text);
+                komutGuncelle.Parameters.AddWithValue("@p10", TxtID.Text);
+                komutGuncelle.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                MessageBox.Show("Gider bilgileri güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                giderListesi();
+                temizle();
+            }
         }
     }
 }
