@@ -41,5 +41,11 @@ namespace Ticari_Otomasyon
         {
             this.Close(); // Formu kapat
         }
+
+        private void FrmYeniGider_Load(object sender, EventArgs e)
+        {
+            CmbAy.SelectedIndex = DateTime.Now.Month - 1;
+            CmbYil.SelectedItem = DateTime.Now.Year.ToString();
+        }
     }
 }

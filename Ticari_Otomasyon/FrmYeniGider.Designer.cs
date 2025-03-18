@@ -161,7 +161,6 @@
             // 
             this.BtnIptal.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnIptal.Appearance.Options.UseFont = true;
-            this.BtnIptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSil.ImageOptions.Image")));
             this.BtnIptal.Location = new System.Drawing.Point(317, 351);
             this.BtnIptal.Name = "BtnIptal";
             this.BtnIptal.Size = new System.Drawing.Size(141, 45);
@@ -359,6 +358,7 @@
             this.Controls.Add(this.labelControl2);
             this.Name = "FrmYeniGider";
             this.Text = "FrmYeniGider";
+            this.Load += new System.EventHandler(this.FrmYeniGider_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TxtEkstra.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMaaslar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtInternet.Properties)).EndInit();
