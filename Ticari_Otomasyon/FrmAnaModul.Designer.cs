@@ -148,6 +148,7 @@
             this.BtnGiderler.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnGiderler.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnGiderler.Name = "BtnGiderler";
+            this.BtnGiderler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGiderler_ItemClick);
             // 
             // BtnKasa
             // 
