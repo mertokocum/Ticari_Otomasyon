@@ -63,7 +63,7 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(37, 298);
+            this.labelControl11.Location = new System.Drawing.Point(35, 261);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(43, 18);
             this.labelControl11.TabIndex = 48;
@@ -73,7 +73,7 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(20, 270);
+            this.labelControl10.Location = new System.Drawing.Point(18, 233);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(60, 18);
             this.labelControl10.TabIndex = 47;
@@ -81,7 +81,7 @@
             // 
             // RchNotlar
             // 
-            this.RchNotlar.Location = new System.Drawing.Point(86, 298);
+            this.RchNotlar.Location = new System.Drawing.Point(84, 261);
             this.RchNotlar.Name = "RchNotlar";
             this.RchNotlar.Size = new System.Drawing.Size(177, 96);
             this.RchNotlar.TabIndex = 43;
@@ -91,7 +91,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(59, 150);
+            this.labelControl8.Location = new System.Drawing.Point(57, 113);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(21, 18);
             this.labelControl8.TabIndex = 39;
@@ -101,7 +101,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(22, 210);
+            this.labelControl7.Location = new System.Drawing.Point(20, 173);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(58, 18);
             this.labelControl7.TabIndex = 45;
@@ -111,7 +111,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(25, 240);
+            this.labelControl6.Location = new System.Drawing.Point(23, 203);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(55, 18);
             this.labelControl6.TabIndex = 46;
@@ -121,7 +121,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(16, 180);
+            this.labelControl5.Location = new System.Drawing.Point(14, 143);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(64, 18);
             this.labelControl5.TabIndex = 44;
@@ -131,7 +131,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(31, 120);
+            this.labelControl4.Location = new System.Drawing.Point(29, 83);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(49, 18);
             this.labelControl4.TabIndex = 35;
@@ -141,7 +141,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(61, 90);
+            this.labelControl3.Location = new System.Drawing.Point(59, 53);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(19, 18);
             this.labelControl3.TabIndex = 34;
@@ -151,7 +151,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(58, 60);
+            this.labelControl2.Location = new System.Drawing.Point(56, 23);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(22, 18);
             this.labelControl2.TabIndex = 31;
@@ -162,7 +162,7 @@
             this.BtnIptal.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnIptal.Appearance.Options.UseFont = true;
             this.BtnIptal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSil.ImageOptions.Image")));
-            this.BtnIptal.Location = new System.Drawing.Point(319, 388);
+            this.BtnIptal.Location = new System.Drawing.Point(317, 351);
             this.BtnIptal.Name = "BtnIptal";
             this.BtnIptal.Size = new System.Drawing.Size(141, 45);
             this.BtnIptal.TabIndex = 50;
@@ -174,7 +174,7 @@
             this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnKaydet.Appearance.Options.UseFont = true;
             this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
-            this.BtnKaydet.Location = new System.Drawing.Point(319, 337);
+            this.BtnKaydet.Location = new System.Drawing.Point(317, 300);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(141, 45);
             this.BtnKaydet.TabIndex = 49;
@@ -183,7 +183,7 @@
             // 
             // TxtEkstra
             // 
-            this.TxtEkstra.Location = new System.Drawing.Point(86, 268);
+            this.TxtEkstra.Location = new System.Drawing.Point(84, 231);
             this.TxtEkstra.Name = "TxtEkstra";
             this.TxtEkstra.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtEkstra.Properties.Appearance.Options.UseFont = true;
@@ -192,7 +192,7 @@
             // 
             // TxtMaaslar
             // 
-            this.TxtMaaslar.Location = new System.Drawing.Point(86, 238);
+            this.TxtMaaslar.Location = new System.Drawing.Point(84, 201);
             this.TxtMaaslar.Name = "TxtMaaslar";
             this.TxtMaaslar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtMaaslar.Properties.Appearance.Options.UseFont = true;
@@ -201,7 +201,7 @@
             // 
             // TxtInternet
             // 
-            this.TxtInternet.Location = new System.Drawing.Point(86, 208);
+            this.TxtInternet.Location = new System.Drawing.Point(84, 171);
             this.TxtInternet.Name = "TxtInternet";
             this.TxtInternet.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtInternet.Properties.Appearance.Options.UseFont = true;
@@ -210,7 +210,7 @@
             // 
             // CmbYil
             // 
-            this.CmbYil.Location = new System.Drawing.Point(86, 88);
+            this.CmbYil.Location = new System.Drawing.Point(84, 51);
             this.CmbYil.Name = "CmbYil";
             this.CmbYil.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.CmbYil.Properties.Appearance.Options.UseFont = true;
@@ -283,7 +283,7 @@
             // 
             // CmbAy
             // 
-            this.CmbAy.Location = new System.Drawing.Point(86, 58);
+            this.CmbAy.Location = new System.Drawing.Point(84, 21);
             this.CmbAy.Name = "CmbAy";
             this.CmbAy.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.CmbAy.Properties.Appearance.Options.UseFont = true;
@@ -307,7 +307,7 @@
             // 
             // TxtElektrik
             // 
-            this.TxtElektrik.Location = new System.Drawing.Point(86, 118);
+            this.TxtElektrik.Location = new System.Drawing.Point(84, 81);
             this.TxtElektrik.Name = "TxtElektrik";
             this.TxtElektrik.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtElektrik.Properties.Appearance.Options.UseFont = true;
@@ -316,7 +316,7 @@
             // 
             // TxtSu
             // 
-            this.TxtSu.Location = new System.Drawing.Point(86, 148);
+            this.TxtSu.Location = new System.Drawing.Point(84, 111);
             this.TxtSu.Name = "TxtSu";
             this.TxtSu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtSu.Properties.Appearance.Options.UseFont = true;
@@ -325,7 +325,7 @@
             // 
             // TxtDogalgaz
             // 
-            this.TxtDogalgaz.Location = new System.Drawing.Point(86, 178);
+            this.TxtDogalgaz.Location = new System.Drawing.Point(84, 141);
             this.TxtDogalgaz.Name = "TxtDogalgaz";
             this.TxtDogalgaz.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.TxtDogalgaz.Properties.Appearance.Options.UseFont = true;
@@ -336,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 450);
+            this.ClientSize = new System.Drawing.Size(472, 413);
             this.Controls.Add(this.BtnIptal);
             this.Controls.Add(this.BtnKaydet);
             this.Controls.Add(this.TxtEkstra);

@@ -29,6 +29,7 @@ namespace Ticari_Otomasyon
         private void FrmGiderler_Load(object sender, EventArgs e)
         {
             giderListesi();
+            temizle();
         }
         void temizle()
         {
@@ -51,6 +52,29 @@ namespace Ticari_Otomasyon
 
             // Yeni kullanıcı eklenip form kapandığında listeyi güncelle
             giderListesi();
+            temizle();
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            if (dr != null)
+            {
+                TxtID.Text = dr["GIDERID"].ToString();
+                CmbAy.Text = dr["AY"].ToString();
+                CmbYil.Text = dr["YIL"].ToString();
+                TxtElektrik.Text = dr["ELEKTRIK"].ToString();
+                TxtSu.Text = dr["SU"].ToString();
+                TxtDogalgaz.Text = dr["DOGALGAZ"].ToString();
+                TxtInternet.Text = dr["INTERNET"].ToString();
+                TxtMaaslar.Text = dr["MAASLAR"].ToString();
+                TxtExtralar.Text = dr["EKSTRA"].ToString();
+                RchNotlar.Text = dr["NOTLAR"].ToString();
+            }
+        }
+
+        private void BtnTemizle_Click(object sender, EventArgs e)
+        {
             temizle();
         }
     }
