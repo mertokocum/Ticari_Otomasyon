@@ -77,5 +77,16 @@ namespace Ticari_Otomasyon
         {
             temizle();
         }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            SqlCommand komutSil = new SqlCommand("Delete From TBL_GIDERLER where GIDERID=@p1", bgl.baglanti());
+            komutSil.Parameters.AddWithValue("@p1", TxtID.Text);
+            komutSil.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            giderListesi();
+            MessageBox.Show("Gider silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            temizle();
+        }
     }
 }

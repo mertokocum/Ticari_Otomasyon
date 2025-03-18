@@ -104,6 +104,7 @@
             this.BtnSil.Size = new System.Drawing.Size(104, 61);
             this.BtnSil.TabIndex = 64;
             this.BtnSil.Text = "Sil";
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // BtnKaydet
             // 
