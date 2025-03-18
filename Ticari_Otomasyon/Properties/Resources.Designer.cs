@@ -61,6 +61,16 @@ namespace Ticari_Otomasyon.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage company_svgrepo_com {
+            get {
+                object obj = ResourceManager.GetObject("company-svgrepo-com", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap freepik__a_blue_envelope_on_a_blue_background_the_envelope___89358 {
@@ -96,6 +106,46 @@ namespace Ticari_Otomasyon.Properties {
         internal static System.Drawing.Bitmap monochromatic_still_life_composition_with_red_paper {
             get {
                 object obj = ResourceManager.GetObject("monochromatic-still-life-composition-with-red-paper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap office__building {
+            get {
+                object obj = ResourceManager.GetObject("office__building", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap office_building {
+            get {
+                object obj = ResourceManager.GetObject("office-building", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap office_building_optimized {
+            get {
+                object obj = ResourceManager.GetObject("office-building_optimized", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap team_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("team_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

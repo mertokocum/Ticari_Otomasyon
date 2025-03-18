@@ -195,5 +195,20 @@
   <ItemGroup>
     <None Include="Resources\mailbg2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office-building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office__building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office-building_optimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company-svgrepo-com.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

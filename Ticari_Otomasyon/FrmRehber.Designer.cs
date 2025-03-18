@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRehber));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -60,8 +61,9 @@
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.gridControl1);
+            this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1902, 821);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1902, 802);
             this.xtraTabPage1.Text = "Müşteriler";
             // 
             // gridControl1
@@ -88,8 +90,10 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.gridControl2);
+            this.xtraTabPage2.ImageOptions.SvgImage = global::Ticari_Otomasyon.Properties.Resources.company_svgrepo_com;
+            this.xtraTabPage2.ImageOptions.SvgImageSize = new System.Drawing.Size(32, 32);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1902, 821);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1902, 802);
             this.xtraTabPage2.Text = "Firmalar";
             // 
             // gridControl2

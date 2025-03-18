@@ -52,10 +52,10 @@
             this.TxtID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.TxtExtralar = new DevExpress.XtraEditors.TextEdit();
+            this.TxtMaaslar = new DevExpress.XtraEditors.TextEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.TxtMaaslar = new DevExpress.XtraEditors.TextEdit();
-            this.TxtExtralar = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtInternet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbYil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbAy.Properties)).BeginInit();
@@ -65,10 +65,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtExtralar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtMaaslar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtMaaslar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtExtralar.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnTemizle
@@ -397,7 +397,24 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(270, 834);
             this.groupControl1.TabIndex = 7;
-            this.groupControl1.Text = "groupControl1";
+            // 
+            // TxtExtralar
+            // 
+            this.TxtExtralar.Location = new System.Drawing.Point(83, 275);
+            this.TxtExtralar.Name = "TxtExtralar";
+            this.TxtExtralar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TxtExtralar.Properties.Appearance.Options.UseFont = true;
+            this.TxtExtralar.Size = new System.Drawing.Size(157, 24);
+            this.TxtExtralar.TabIndex = 10;
+            // 
+            // TxtMaaslar
+            // 
+            this.TxtMaaslar.Location = new System.Drawing.Point(83, 245);
+            this.TxtMaaslar.Name = "TxtMaaslar";
+            this.TxtMaaslar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TxtMaaslar.Properties.Appearance.Options.UseFont = true;
+            this.TxtMaaslar.Size = new System.Drawing.Size(157, 24);
+            this.TxtMaaslar.TabIndex = 10;
             // 
             // gridControl1
             // 
@@ -415,24 +432,6 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // TxtMaaslar
-            // 
-            this.TxtMaaslar.Location = new System.Drawing.Point(83, 245);
-            this.TxtMaaslar.Name = "TxtMaaslar";
-            this.TxtMaaslar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.TxtMaaslar.Properties.Appearance.Options.UseFont = true;
-            this.TxtMaaslar.Size = new System.Drawing.Size(157, 24);
-            this.TxtMaaslar.TabIndex = 10;
-            // 
-            // TxtExtralar
-            // 
-            this.TxtExtralar.Location = new System.Drawing.Point(83, 275);
-            this.TxtExtralar.Name = "TxtExtralar";
-            this.TxtExtralar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.TxtExtralar.Properties.Appearance.Options.UseFont = true;
-            this.TxtExtralar.Size = new System.Drawing.Size(157, 24);
-            this.TxtExtralar.TabIndex = 10;
-            // 
             // FrmGiderler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,6 +441,7 @@
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmGiderler";
             this.Text = "GİDERLER";
+            this.Load += new System.EventHandler(this.FrmGiderler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TxtInternet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbYil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbAy.Properties)).EndInit();
@@ -452,10 +452,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtExtralar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtMaaslar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtMaaslar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtExtralar.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
