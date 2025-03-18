@@ -30,5 +30,28 @@ namespace Ticari_Otomasyon
         {
             giderListesi();
         }
+        void temizle()
+        {
+            CmbAy.Text = "";
+            CmbYil.Text = "";
+            TxtDogalgaz.Text = "";
+            TxtElektrik.Text = "";
+            TxtExtralar.Text = "";
+            TxtID.Text = "";
+            TxtInternet.Text = "";
+            TxtMaaslar.Text = "";
+            TxtSu.Text = "";
+            RchNotlar.Text = "";
+        }
+
+        private void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            FrmYeniGider yeniGiderFormu = new FrmYeniGider();
+            yeniGiderFormu.ShowDialog(); // Modally form açılır
+
+            // Yeni kullanıcı eklenip form kapandığında listeyi güncelle
+            giderListesi();
+            temizle();
+        }
     }
 }
