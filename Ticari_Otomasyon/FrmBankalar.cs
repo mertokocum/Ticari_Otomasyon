@@ -18,6 +18,16 @@ namespace Ticari_Otomasyon
         {
             InitializeComponent();
         }
+        void sehirlistesi()
+        {
+            SqlCommand komut = new SqlCommand("Select Sehir From TBL_ILLER", bgl.baglanti());
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                Cmbil.Properties.Items.Add(dr[0]);
+            }
+            bgl.baglanti().Close();
+        }
         void listele()
         {
             DataTable dt = new DataTable();
@@ -29,6 +39,7 @@ namespace Ticari_Otomasyon
         private void FrmBankalar_Load(object sender, EventArgs e)
         {
             listele();
+            sehirlistesi();
         }
         void temizle()
         {
@@ -58,6 +69,19 @@ namespace Ticari_Otomasyon
             // Yeni kullanıcı eklenip form kapandığında listeyi güncelle
             listele();
             temizle();
+        }
+
+        private void Cmbil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cmbilce.Properties.Items.Clear();
+            SqlCommand komut = new SqlCommand("Select ILCE From TBL_ILCELER where Sehir=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", Cmbil.SelectedIndex + 1);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                Cmbilce.Properties.Items.Add(dr[0]);
+            }
+            bgl.baglanti().Close();
         }
     }
 }

@@ -144,6 +144,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Cmbil.Size = new System.Drawing.Size(157, 24);
             this.Cmbil.TabIndex = 8;
+            this.Cmbil.SelectedIndexChanged += new System.EventHandler(this.Cmbil_SelectedIndexChanged);
             // 
             // TxtSube
             // 

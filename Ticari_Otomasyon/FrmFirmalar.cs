@@ -141,12 +141,7 @@ namespace Ticari_Otomasyon
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            if (TxtID.Text == "")
-            {
-                MessageBox.Show("Firma Seçmediniz", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
+            
                 SqlCommand komut =
                     new SqlCommand(
                         "insert into TBL_FIRMALAR (AD,YETKILISTATU,YETKILIADSOYAD,YETKILITC,SEKTOR,TELEFON1,TELEFON2,TELEFON3,MAIL,FAX,IL,ILCE,VERGIDAIRE,ADRES,OZELKOD1,OZELKOD2,OZELKOD3 ) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17)",
@@ -173,7 +168,7 @@ namespace Ticari_Otomasyon
                 MessageBox.Show("Firma Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 firmalistesi();
                 temizle();
-            }
+            
 
         }
 
