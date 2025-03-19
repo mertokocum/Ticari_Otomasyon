@@ -177,9 +177,5 @@ namespace Ticari_Otomasyon
             // Form kapatıldığında fr6 değişkenini null olarak ayarla
             fr7 = null;
         }
-
-        
-
-        
     }
 }
