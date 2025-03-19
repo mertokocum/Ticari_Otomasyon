@@ -153,5 +153,33 @@ namespace Ticari_Otomasyon
             // Form kapatıldığında fr6 değişkenini null olarak ayarla
             fr6 = null;
         }
+
+        FrmBankalar fr7;
+
+        private void BtnBankalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            if (fr7 == null || fr7.IsDisposed)
+            {
+                fr7 = new FrmBankalar();
+                fr7.MdiParent = this;
+                fr7.FormClosed += Fr7_FormClosed; // Form kapatıldığında olayı yakala
+                fr7.Show();
+            }
+            else
+            {
+                // Form zaten açık ise, kullanıcıya odaklan.
+                fr7.Activate();
+            }
+        }
+        private void Fr7_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Form kapatıldığında fr6 değişkenini null olarak ayarla
+            fr7 = null;
+        }
+
+        
+
+        
     }
 }
