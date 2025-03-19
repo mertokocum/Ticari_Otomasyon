@@ -21,7 +21,7 @@ namespace Ticari_Otomasyon
         void listele()
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * From TBL_BANKALAR", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Execute BankaBilgileri", bgl.baglanti());
             da.Fill(dt);
             gridControl1.DataSource = dt;
         }
