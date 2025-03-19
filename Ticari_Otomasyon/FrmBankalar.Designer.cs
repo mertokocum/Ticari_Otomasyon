@@ -121,6 +121,7 @@
             this.BtnKaydet.Size = new System.Drawing.Size(230, 61);
             this.BtnKaydet.TabIndex = 63;
             this.BtnKaydet.Text = "Yeni\r\nPersonel";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // Cmbilce
             // 

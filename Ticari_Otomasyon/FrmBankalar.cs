@@ -49,5 +49,15 @@ namespace Ticari_Otomasyon
         {
             temizle();
         }
+
+        private void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            FrmYeniBanka yeniBankaFormu = new FrmYeniBanka();
+            yeniBankaFormu.ShowDialog(); // Modally form açılır
+
+            // Yeni kullanıcı eklenip form kapandığında listeyi güncelle
+            listele();
+            temizle();
+        }
     }
 }

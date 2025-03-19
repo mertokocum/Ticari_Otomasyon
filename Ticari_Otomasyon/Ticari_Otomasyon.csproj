@@ -117,6 +117,12 @@
     <Compile Include="FrmUrunler.Designer.cs">
       <DependentUpon>FrmUrunler.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmYeniBanka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmYeniBanka.Designer.cs">
+      <DependentUpon>FrmYeniBanka.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmYeniGider.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUrunler.resx">
       <DependentUpon>FrmUrunler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmYeniBanka.resx">
+      <DependentUpon>FrmYeniBanka.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmYeniGider.resx">
       <DependentUpon>FrmYeniGider.cs</DependentUpon>
