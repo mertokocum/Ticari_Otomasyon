@@ -57,7 +57,7 @@ namespace Ticari_Otomasyon
             komut.Parameters.AddWithValue("@p8", MskTelefon.Text);
             komut.Parameters.AddWithValue("@p9", MskTarih.Text);
             komut.Parameters.AddWithValue("@p10", TxtHesapTuru.Text);
-            komut.Parameters.AddWithValue("@p11", lookUpEdit1.Text);
+            komut.Parameters.AddWithValue("@p11", lookUpEdit1.EditValue);
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
             MessageBox.Show("Banka Bilgisi Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
