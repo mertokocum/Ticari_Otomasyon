@@ -28,7 +28,7 @@ namespace Ticari_Otomasyon
             }
             bgl.baglanti().Close();
         }
-        void listele()
+        public void listele()
         {
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Execute BankaBilgileri", bgl.baglanti());
@@ -36,17 +36,29 @@ namespace Ticari_Otomasyon
             gridControl1.DataSource = dt;
         }
         sqlbaglantisi bgl = new sqlbaglantisi();
+        
         private void FrmBankalar_Load(object sender, EventArgs e)
         {
             listele();
             sehirlistesi();
+            firmaListesi();
         }
-        void temizle()
+        public void firmaListesi()
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select ID,AD from TBL_FIRMALAR", bgl.baglanti());
+            da.Fill(dt);
+            lookUpEdit1.Properties.NullText= "Lütfen Firma Seçiniz";
+            lookUpEdit1.Properties.ValueMember = "ID";
+            lookUpEdit1.Properties.DisplayMember = "AD";
+            lookUpEdit1.Properties.DataSource = dt;
+        }
+        public void temizle()
         {
             Cmbil.Text = "";
             Cmbilce.Text = "";
             TxtBankaAdı.Text = "";
-            TxtFirmaAdı.Text = "";
+            lookUpEdit1.Text = "";
             TxtHesapNo.Text = "";
             TxtID.Text = "";
             TxtHesapTuru.Text = "";

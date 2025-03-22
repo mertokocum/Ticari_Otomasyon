@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmYeniBanka));
             this.Cmbilce = new DevExpress.XtraEditors.ComboBoxEdit();
             this.Cmbil = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.TxtFirmaAdı = new DevExpress.XtraEditors.TextEdit();
             this.TxtHesapTuru = new DevExpress.XtraEditors.TextEdit();
             this.TxtYetkili = new DevExpress.XtraEditors.TextEdit();
             this.TxtHesapNo = new DevExpress.XtraEditors.TextEdit();
@@ -53,15 +52,16 @@
             this.MskTelefon = new System.Windows.Forms.MaskedTextBox();
             this.BtnIptal = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.Cmbilce.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cmbil.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtFirmaAdı.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHesapTuru.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtYetkili.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHesapNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtIban.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSube.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtBankaAdı.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Cmbilce
@@ -86,15 +86,6 @@
             this.Cmbil.Properties.SelectedIndexChanged += new System.EventHandler(this.Cmbil_Properties_SelectedIndexChanged);
             this.Cmbil.Size = new System.Drawing.Size(157, 24);
             this.Cmbil.TabIndex = 30;
-            // 
-            // TxtFirmaAdı
-            // 
-            this.TxtFirmaAdı.Location = new System.Drawing.Point(103, 326);
-            this.TxtFirmaAdı.Name = "TxtFirmaAdı";
-            this.TxtFirmaAdı.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.TxtFirmaAdı.Properties.Appearance.Options.UseFont = true;
-            this.TxtFirmaAdı.Size = new System.Drawing.Size(157, 24);
-            this.TxtFirmaAdı.TabIndex = 24;
             // 
             // TxtHesapTuru
             // 
@@ -288,6 +279,7 @@
             this.BtnIptal.Size = new System.Drawing.Size(141, 45);
             this.BtnIptal.TabIndex = 52;
             this.BtnIptal.Text = "İptal";
+            this.BtnIptal.Click += new System.EventHandler(this.BtnIptal_Click);
             // 
             // BtnKaydet
             // 
@@ -301,16 +293,27 @@
             this.BtnKaydet.Text = "Gider Ekle";
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(103, 326);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lookUpEdit1.Properties.Appearance.Options.UseFont = true;
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Size = new System.Drawing.Size(157, 24);
+            this.lookUpEdit1.TabIndex = 68;
+            // 
             // FrmYeniBanka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 377);
+            this.Controls.Add(this.lookUpEdit1);
             this.Controls.Add(this.BtnIptal);
             this.Controls.Add(this.BtnKaydet);
             this.Controls.Add(this.Cmbilce);
             this.Controls.Add(this.Cmbil);
-            this.Controls.Add(this.TxtFirmaAdı);
             this.Controls.Add(this.TxtHesapTuru);
             this.Controls.Add(this.TxtYetkili);
             this.Controls.Add(this.TxtHesapNo);
@@ -335,13 +338,13 @@
             this.Load += new System.EventHandler(this.FrmYeniBanka_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Cmbilce.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cmbil.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtFirmaAdı.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHesapTuru.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtYetkili.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHesapNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtIban.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSube.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtBankaAdı.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,7 +354,6 @@
 
         private DevExpress.XtraEditors.ComboBoxEdit Cmbilce;
         private DevExpress.XtraEditors.ComboBoxEdit Cmbil;
-        private DevExpress.XtraEditors.TextEdit TxtFirmaAdı;
         private DevExpress.XtraEditors.TextEdit TxtHesapTuru;
         private DevExpress.XtraEditors.TextEdit TxtYetkili;
         private DevExpress.XtraEditors.TextEdit TxtHesapNo;
@@ -373,5 +375,6 @@
         private System.Windows.Forms.MaskedTextBox MskTelefon;
         private DevExpress.XtraEditors.SimpleButton BtnIptal;
         private DevExpress.XtraEditors.SimpleButton BtnKaydet;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
     }
 }

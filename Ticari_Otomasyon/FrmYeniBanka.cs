@@ -31,6 +31,17 @@ namespace Ticari_Otomasyon
         private void FrmYeniBanka_Load(object sender, EventArgs e)
         {
             sehirlistesi();
+            firmaListesi();
+        }
+
+        void firmaListesi()
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select ID,AD from TBL_FIRMALAR", bgl.baglanti());
+            da.Fill(dt);
+            lookUpEdit1.Properties.ValueMember = "ID";
+            lookUpEdit1.Properties.DisplayMember = "AD";
+            lookUpEdit1.Properties.DataSource = dt;
         }
 
         private void BtnKaydet_Click(object sender, EventArgs e)
@@ -46,7 +57,7 @@ namespace Ticari_Otomasyon
             komut.Parameters.AddWithValue("@p8", MskTelefon.Text);
             komut.Parameters.AddWithValue("@p9", MskTarih.Text);
             komut.Parameters.AddWithValue("@p10", TxtHesapTuru.Text);
-            komut.Parameters.AddWithValue("@p11", TxtFirmaAdı.Text);
+            komut.Parameters.AddWithValue("@p11", lookUpEdit1.Text);
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
             MessageBox.Show("Banka Bilgisi Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -64,6 +75,11 @@ namespace Ticari_Otomasyon
                 Cmbilce.Properties.Items.Add(dr[0]);
             }
             bgl.baglanti().Close();
+        }
+
+        private void BtnIptal_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
