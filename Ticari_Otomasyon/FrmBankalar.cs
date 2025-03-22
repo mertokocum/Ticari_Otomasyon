@@ -95,5 +95,25 @@ namespace Ticari_Otomasyon
             }
             bgl.baglanti().Close();
         }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            if (dr != null)
+            {
+                TxtID.Text = dr["ID"].ToString();
+                TxtBankaAdı.Text = dr["BANKAADI"].ToString();
+                Cmbil.Text = dr["IL"].ToString();
+                Cmbilce.Text = dr["ILCE"].ToString();
+                TxtSube.Text = dr["SUBE"].ToString();
+                TxtIban.Text = dr["IBAN"].ToString();
+                TxtHesapNo.Text = dr["HESAPNO"].ToString();
+                TxtYetkili.Text = dr["YETKILI"].ToString();
+                MskTelefon.Text = dr["TELEFON"].ToString();
+                MskTarih.Text = dr["TARIH"].ToString();
+                TxtHesapTuru.Text = dr["HESAPTURU"].ToString();
+                //lookUpEdit1.Text = dr["FIRMAID"].ToString();
+            }
+        }
     }
 }
