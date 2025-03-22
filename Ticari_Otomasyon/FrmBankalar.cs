@@ -161,5 +161,34 @@ namespace Ticari_Otomasyon
 
             }
         }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            if (TxtID.Text == "")
+            {
+                MessageBox.Show("Banka Seçmediniz", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                SqlCommand komut = new SqlCommand("update TBL_BANKALAR set BANKAADI=@P1,IL=@P2,ILCE=@P3,SUBE=@P4,IBAN=@P5,HESAPNO=@P6,YETKILI=@P7,TELEFON=@P8,TARIH=@P9,HESAPTURU=@P10,FIRMAID=@P11 WHERE ID=@P18", bgl.baglanti());
+                komut.Parameters.AddWithValue("@p1", TxtBankaAdı.Text);
+                komut.Parameters.AddWithValue("@p2", Cmbil.Text);
+                komut.Parameters.AddWithValue("@p3", Cmbilce.Text);
+                komut.Parameters.AddWithValue("@p4", TxtSube.Text);
+                komut.Parameters.AddWithValue("@p5", TxtIban.Text);
+                komut.Parameters.AddWithValue("@p6", TxtHesapNo.Text);
+                komut.Parameters.AddWithValue("@p7", TxtYetkili.Text);
+                komut.Parameters.AddWithValue("@p8", MskTelefon.Text);
+                komut.Parameters.AddWithValue("@p9", MskTarih.Text);
+                komut.Parameters.AddWithValue("@p10", TxtHesapTuru.Text);
+                komut.Parameters.AddWithValue("@p11", lookUpEdit1.EditValue);
+                komut.Parameters.AddWithValue("@p18", TxtID.Text);
+                komut.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                listele();
+                temizle();
+                MessageBox.Show("Banka Bilgileri Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
